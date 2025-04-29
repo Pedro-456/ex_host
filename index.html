@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador de Consumo de Água Escolar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="Greentec Logo.png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="Greentec Logo.png" alt="Logo Greentec" class="logo-img" />
+      <div class="text-header">
+        <h1>Simulador de Consumo de Água Escolar</h1>
+        <p>Reduza o consumo de água na sua escola com pequenas ações!</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="form-container">
+        <h2>Preencha os dados abaixo para calcular o consumo de água na escola:</h2>
+
+        <div class="questionnaire">
+          <div class="category">
+            <h3>Dados Básicos</h3>
+            <label for="alunos">Número de alunos:</label>
+            <input type="number" id="alunos" placeholder="Ex: 500" />
+
+            <label for="funcionarios">Número total de funcionários da limpeza:</label>
+            <input type="number" id="funcionarios" placeholder="Ex: 50" />
+
+            <label for="diasUso">Quantos dias por semana a escola funciona?</label>
+            <input type="number" id="diasUso" placeholder="Ex: 5" />
+
+            <label for="horasPermanencia">Média de permanência diária dos alunos (em horas):</label>
+            <input type="number" id="horasPermanencia" placeholder="Ex: 6" />
+          </div>
+
+          <div class="category">
+            <h3>Infraestrutura</h3>
+            <label for="torneiras">Quantas torneiras existem na escola?</label>
+            <input type="number" id="torneiras" placeholder="Ex: 15" />
+
+            <label for="qtdBebedouros">Quantos bebedouros existem na escola?</label>
+            <input type="number" id="qtdBebedouros" placeholder="Ex: 4" />
+
+            <label for="tipoBebedouro">Qual tipo de bebedouro é utilizado?</label>
+            <select id="tipoBebedouro">
+              <option value="fluxo">Fluxo contínuo</option>
+              <option value="botao">Botão</option>
+              <option value="copos">Sistema com copos</option>
+            </select>
+
+            <label for="vasos">Quantos vasos sanitários existem na escola?</label>
+            <input type="number" id="vasos" placeholder="Ex: 20" />
+          </div>
+
+          <div class="category">
+            <h3>Uso Diário</h3>
+            <label for="limpezas">Quantas vezes por semana o pátio é lavado?</label>
+            <input type="number" id="limpezas" placeholder="Ex: 2" />
+
+            <label for="lavagem">Método de lavagem do pátio:</label>
+            <select id="lavagem">
+              <option value="mangueira">Mangueira</option>
+              <option value="balde">Balde</option>
+              <option value="ambos">Ambos</option>
+            </select>
+
+            <label for="jardim">A escola possui jardim ou área verde que precisa de irrigação?</label>
+            <select id="jardim">
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </div>
+
+          <div class="category">
+            <h3>Fatores de Conscientização e Infraestrutura</h3>
+            <label for="vazamentos">Existem vazamentos na escola?</label>
+            <input type="checkbox" id="vazamentos" />
+
+            <label for="reuso">A escola possui sistema de reaproveitamento de água?</label>
+            <select id="reuso">
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+
+            <label for="campanha">A escola realiza campanhas educativas sobre o uso racional da água?</label>
+            <select id="campanha">
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </div>
+
+          <button onclick="calcularConsumo()">Calcular Consumo de Água</button>
+        </div>
+      </section>
+
+      <section class="results">
+        <div id="resultado"></div>
+        <div id="grafico">
+          <canvas id="graficoConsumo"></canvas>
+        </div>
+        <div id="recomendacoes"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Todos os direitos reservados - Greentec</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

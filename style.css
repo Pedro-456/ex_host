@@ -1,0 +1,231 @@
+:root {
+    --primary-color: #004d77;
+    --secondary-color: #00aaff;
+    --highlight-color: #1976d2;
+    --light-bg: #e3f2fd;
+    --text-color: #333;
+    --white: #ffffff;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+header {
+    background-color: var(--primary-color);
+    padding: 2.5rem 1rem;
+    color: var(--white);
+    text-align: center;
+    box-shadow: var(--shadow);
+    width: 100vw;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  
+  header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+  
+  /* Formulário */
+  form {
+    margin-top: 2rem;
+  }
+  
+  .questionnaire {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .category {
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--secondary-color);
+    padding-left: 1rem;
+  }
+  
+  .category h2 {
+    font-size: 1.6rem;
+    color: var(--highlight-color);
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 0.9rem;
+    margin-bottom: 1.2rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus,
+  select:focus {
+    outline: none;
+    border-color: var(--highlight-color);
+    background-color: #f0faff;
+  }
+  
+  /* Botão */
+  button {
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 14px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #0088cc;
+    transform: translateY(-2px);
+  }
+  
+  .results {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  
+  #resultado,
+  #recomendacoes {
+    background-color: var(--white);
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: var(--shadow);
+    text-align: left;
+  }
+  
+  #recomendacoes ul {
+    padding-left: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  #recomendacoes li {
+    margin-bottom: 0.6rem;
+    list-style: disc;
+  }
+  
+  /* Gráfico */
+  #grafico {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    overflow-x: auto;
+  }
+  
+  /* Mensagens (opcional) */
+  .message {
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .message.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: #004d77;
+    text-align: center;
+    color: white;
+    padding: 1.5rem;
+    margin-top: 4rem;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    border-radius: 0; /* <- Removendo o arredondamento */
+  }
+  
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    .category h2 {
+      font-size: 1.3rem;
+    }
+  
+    input, select, button {
+      font-size: 1rem;
+    }
+  
+    #grafico {
+      padding: 1rem;
+    }
+  }
+  .header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo-img {
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .text-header {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
